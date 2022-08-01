@@ -1,0 +1,168 @@
+﻿focus_tree = {
+	id = slavic_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = SLA
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = {
+		id = SLA_industry_1
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon = GFX_focus_SLA_test
+
+		x = 5
+		y = 0
+
+		cost = 3.6
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = POL
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			add_political_power = 55
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SLA_industry_2
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon = GFX_goal_generic_major_war
+
+		x = -2
+		y = 1
+		relative_position_id = SLA_industry_1
+
+		cost = 10
+		prerequisite = { focus = SLA_industry_1 }
+		mutually_exclusive = { focus = SLA_industry_3 }
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = SLA_industry_3
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		icon = GFX_goal_generic_major_war
+
+		x = 2
+		y = 1
+		relative_position_id = SLA_industry_1
+
+		cost = 10
+		prerequisite = { focus = SLA_industry_1 }
+		mutually_exclusive = { focus = SLA_industry_2 }
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#	focus = {
+#		id = SLA_
+#		icon = GFX_
+#
+#		x = 0
+#		y = 0
+#		relative_position_id =
+#
+#		cost = 10
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#	}
+
+}

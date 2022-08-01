@@ -1,0 +1,6 @@
+# Colors of the new Slavic countries
+
+SLA = {
+	color = rgb { 255  255  195 }
+	color_ui = rgb { 255  255  195 }
+}
